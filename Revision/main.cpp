@@ -6,18 +6,24 @@ using namespace std;
 
 int main(){
 
-    int year;
-    cout<<"Enter year: ";
-    cin>>year;
+    // Check whether the number is Armstrong or not
+    int num;
+    cout<<"Enter number: ";
+    cin>>num;
 
-    if(year % 400 == 0){
-        cout<<year<<" is a leap year."<<endl;
-    } else if(year % 100 == 0){
-        cout<<year<<" not a leap year."<<endl;
-    } else if(year % 4 == 0){
-        cout<<year<<" is a leap year"<<endl;
+    int n = num;
+
+    int digit1 = n%10;
+    n /= 10;
+    int digit2 = n%10;
+    n /= 10;
+    int digit3 = n%10;
+    n /= 10;
+    int armstrongNumber = (digit1*digit1*digit1)+(digit2*digit2*digit2)+(digit3*digit3*digit3);
+    if(armstrongNumber == num){
+        cout<<num<< " is a Armstrong number."<<endl;
     } else {
-        cout<<year<<" is not a leap year."<<endl;
+        cout<<num<<" is not a Armstrong number."<<endl;
     }
 
     return 0;
