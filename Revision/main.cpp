@@ -1,30 +1,21 @@
-#include<iostream>
-#define PI 3.14;
-
+#include <iostream>
 using namespace std;
 
+int main()
+{
 
-int main(){
-
-    // Check whether the number is Armstrong or not
     int num;
-    cout<<"Enter number: ";
-    cin>>num;
+    cout << "Enter number: ";
+    cin >> num;
 
-    int n = num;
-
-    int digit1 = n%10;
-    n /= 10;
-    int digit2 = n%10;
-    n /= 10;
-    int digit3 = n%10;
-    n /= 10;
-    int armstrongNumber = (digit1*digit1*digit1)+(digit2*digit2*digit2)+(digit3*digit3*digit3);
-    if(armstrongNumber == num){
-        cout<<num<< " is a Armstrong number."<<endl;
-    } else {
-        cout<<num<<" is not a Armstrong number."<<endl;
+    int revNum = 0;
+    while (num != 0)
+    {
+        int digit = num % 10;
+        revNum = revNum * 10 + digit;
+        num /= 10;
     }
+    cout<<revNum<<endl;
 
     return 0;
 }
