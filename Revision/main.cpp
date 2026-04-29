@@ -6,14 +6,9 @@ using namespace std;
 
 int main(){
 
-    float p, r, n;
-    cout<<"Enter principal: ";
-    cin>>p;
-    cout<<"Enter Rate of Intrest: ";
-    cin>>r;
-    cout<<"Enter number of years: ";
-    cin>>n;
-    float SI = (p*r*n)/100;
-    cout<<"Simple Intrest = "<<SI<<endl;
+    const int n = 25;
+    cout<<n<<endl;
+    n = 35;
+    cout<<n<<endl;
     return 0;
 }
