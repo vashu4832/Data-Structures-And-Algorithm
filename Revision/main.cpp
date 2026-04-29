@@ -6,17 +6,14 @@ using namespace std;
 
 int main(){
 
-    float pencil, eraser, pen;
-    cout<<"Enter cost of pencil: ";
-    cin>>pencil;
-    cout<<"Enter cost of Eraser: ";
-    cin>>eraser;
-    cout<<"Enter cost of pen: ";
-    cin>>pen;
-    float total = pen+pencil+eraser;
-    cout<<"Total bill = "<<total<<endl;
-
-    cout<<"Total after GST = "<<(total*0.18)+total<<endl;
-
+    float p, r, n;
+    cout<<"Enter principal: ";
+    cin>>p;
+    cout<<"Enter Rate of Intrest: ";
+    cin>>r;
+    cout<<"Enter number of years: ";
+    cin>>n;
+    float SI = (p*r*n)/100;
+    cout<<"Simple Intrest = "<<SI<<endl;
     return 0;
 }
