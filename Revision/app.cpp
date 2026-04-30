@@ -37,13 +37,28 @@ int main(){
     // }
 
     // Print the sum of digit of a number
+    // int n;
+    // cout<<"Enter number: ";
+    // cin>>n;
+    // int sum = 0;
+    // while(n>0){
+    //     int digit = n % 10;
+    //     sum += digit;
+    //     n /= 10;
+    // }
+    // cout<<"Sum of digit is "<<sum<<endl;
+
+    // Print the sum of Odd digit of a Number
     int n;
     cout<<"Enter number: ";
     cin>>n;
     int sum = 0;
     while(n>0){
         int digit = n % 10;
-        sum += digit;
+        if(digit%2 != 0){
+            sum += digit;
+         
+        }
         n /= 10;
     }
     cout<<"Sum of digit is "<<sum<<endl;
