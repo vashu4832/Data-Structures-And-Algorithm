@@ -1,5 +1,6 @@
 #include<iostream>
 #include<climits>
+#include<math.h>
 using namespace std;
 
 int main(){
@@ -87,15 +88,51 @@ int main(){
 
 
     // WAP where user keeps entering the number till they enter multiple of 10
+    // int n;
+    // cout<<"Enter number: ";
+    // while(true){
+    //     if(n % 10 == 0){
+    //         break;
+    //     } else {
+    //         cin>>n;
+    //     }
+    // }
+
+
+
+    // WAP to show numbers entered by user except multiple of 10
+    // int n;
+    
+    // while(true){
+    //     cout<<"Enter number: ";
+    //     cin>>n;
+    //     if(n % 10 == 0){
+    //         continue;
+    //     }
+        
+    //     cout<<"You entered: "<<n<<endl;
+    // }
+
+
+
+    // Check if a number is prime or not
     int n;
     cout<<"Enter number: ";
-    while(true){
-        if(n % 10 == 0){
+    cin>>n;
+    bool isPrime = true;
+    for(int i=2;i<sqrt(n);i++){
+        if(n % i == 0){
+            isPrime = false; 
             break;
-        } else {
-            cin>>n;
         }
     }
+    if(isPrime == true){
+        cout<<n<< " is a prime number."<<endl;
+    } else {
+        cout<<n<<" is not prime number."<<endl;
+    }
+    
+    
 
     return 0;
 }
