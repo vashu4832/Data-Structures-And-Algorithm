@@ -179,6 +179,6 @@ int main(){
         } else {
         cout<<"Retirement time";
         }
-    } 
+    }
     return 0;
 }
