@@ -294,6 +294,10 @@ int main(){
     //     cout<<endl;
     // }
 
+
+
+
+
     /*
     Q16. A
          B B
@@ -312,24 +316,124 @@ int main(){
 
     
     
-    for(int i=0;i<n;i++){
-            for(int j=1;j<=n-i;j++){
-                cout<<"  ";
-            }
-            char ch = 'A';
-            int breakpoint = (2*i+1)/2;
-            for(int j=1;j<=2*i+1;j++){
-                cout<<char(ch)<<" ";
-                if(j <= breakpoint){
-                    ch++;
-                } else {
-                    ch--;
-                }
-            } 
-            for(int j=1;j<=n-i;j++){
-                cout<<"  ";
-            }
-            cout<<endl;
+
+    // Q17.
+    // for(int i=0;i<n;i++){
+    //         for(int j=1;j<=n-i;j++){
+    //             cout<<"  ";
+    //         }
+    //         char ch = 'A';
+    //         int breakpoint = (2*i+1)/2;
+    //         for(int j=1;j<=2*i+1;j++){
+    //             cout<<char(ch)<<" ";
+    //             if(j <= breakpoint){
+    //                 ch++;
+    //             } else {
+    //                 ch--;
+    //             }
+    //         } 
+    //         for(int j=1;j<=n-i;j++){
+    //             cout<<"  ";
+    //         }
+    //         cout<<endl;
+    //     }
+
+
+    // Q18.
+    // for(int i=1;i<=n;i++){
+    //     char ch = 'A' + (n-i);
+    //     for(int j=1;j<=i;j++){
+    //         cout<<ch<<" ";
+    //         ch++;
+    //     }
+    //     cout<<endl;
+    // }
+
+
+
+
+
+    // Q19.
+    // for(int i=1;i<=n;i++){
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     for(int j=1;j<=2*i-2;j++){
+    //         cout<<"  ";
+    //     }
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+    // for(int i=n;i>=1;i--){
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     for(int j=1;j<=2*i-2;j++){
+    //         cout<<"  ";
+    //     }
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+
+
+
+
+
+    // Q20.
+    // for(int i=n;i>=1;i--){
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     for(int j=1;j<=2*i-2;j++){
+    //         cout<<"  ";
+    //     }
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+    // for(int i=2;i<=n;i++){
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     for(int j=1;j<=2*i-2;j++){
+    //         cout<<"  ";
+    //     }
+    //     for(int j=1;j<=n-i+1;j++){
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+
+
+    // Q21.
+    // for(int i=1;i<=n;i++){
+    //     for(int j=1;j<=n;j++){
+    //         if(i==1 || i==n || j==1 || j==n){
+    //             cout<<"* ";
+    //         } else {
+    //             cout<<"  ";
+    //         }
+    //     }
+    //     cout<<endl;
+    // }
+
+
+    // Q22.
+        for(int i=0;i<2*n-1;i++){
+        for(int j=0;j<2*n-1;j++){
+            int top = i;
+            int left  = j;
+            int right = (2*n -2)-j;
+            int down = (2*n -2)-i;
+            cout<<(n- min(min(top, down), min(left, right)))<<" ";
         }
+        cout<<endl;
+    }
+
     return 0;
 }
