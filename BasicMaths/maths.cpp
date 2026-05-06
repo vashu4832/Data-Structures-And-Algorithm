@@ -57,14 +57,36 @@ int main(){
     // }
 
 
-    for(int i=1;i<=sqrt(n);i++){
-        if(n%i==0){
-            cout<<i<<" ";
-            if(i%n != 0){
-            cout<<n<<" ";
-        }
-        }
+    // for(int i=1;i<=sqrt(n);i++){
+    //     if(n%i==0){
+    //         cout<<i<<" ";
+    //         if(i%n != 0){
+    //         cout<<n<<" ";
+    //     }
+    //     }
         
+    // }
+
+
+    // Check for prime number
+
+    if(n<=1){
+        cout<<n<<" is not a Prime Number."<<endl;
+    } else {
+        bool isPrime = true;
+
+        for(int i=2;i<=sqrt(n);i++){
+            if(n % i == 0){
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime == false){
+            cout<<n<<" is not a Prime Number."<<endl;
+        } else {
+            cout<<n<<" is a Prime Number."<<endl;
+        }
     }
+    
     return 0;
 }
