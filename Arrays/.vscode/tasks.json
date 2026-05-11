@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and Run with IO files",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "g++ -std=c++17 -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" \"${file}\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\" && type \"${fileDirname}\\output.txt\""
+      ],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": [
+            "/c"
+          ]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}
